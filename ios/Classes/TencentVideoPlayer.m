@@ -96,7 +96,9 @@
             NSDictionary* authMap =  argsMap[@"auth"];
             int  appId= [authMap[@"appId"] intValue];
             NSString  *fileId= authMap[@"fileId"];
+            NSString  *sign= authMap[@"sign"];
             TXPlayerAuthParams *p = [TXPlayerAuthParams new];
+            p.sign = sign;
             p.appId = appId;
             p.fileId = fileId;
             [_txPlayer startPlayWithParams:p];
